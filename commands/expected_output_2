@@ -1,0 +1,12 @@
+Enter the command file: 
+0, 0, WEST
+Destination (-1, 0) cannot be reached.
+Destination (0, -1) cannot be reached.
+Destination (5, 0) cannot be reached.
+4, 0, EAST
+Destination (4, 5) cannot be reached.
+4, 4, NORTH
+Destination (-1, 4) cannot be reached.
+0, 4, WEST
+Destination (0, -1) cannot be reached.
+0, 0, SOUTH
