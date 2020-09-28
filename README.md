@@ -7,7 +7,9 @@ The application is a simulation of a toy robot moving on a square table top, of 
 1. run `pip install -r requirements.txt` to install the necessary libraries
 ### Running the program
 #### Run the main program:
-1. Write a command file that the robot can understand. See [Command File Section](##Command File)
+1. Write a command file that the robot can understand. See [Command file section](##Command-File) or existing examples under `commands/`
+
+
 2. Run `python robot.py` in console and enter the path to the command file as prompted
 #### Run tests
 1. Make sure _pytest_ is correctly installed
