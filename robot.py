@@ -104,18 +104,23 @@ class Robot:
         Raises:
             InvalidOperationException: Raises when no action details is provided
             InvalidOperationException: Raises when invalid action details is provided
+            InvalidOperationException: Raises when invalid action details is provided
             InvalidOperationException: Raises when an invalid position is provided in action details
             InvalidOperationException: Raise when an invalid direction is provided in action details
         """
         action_details = kwargs.get('action_details')
         if action_details is None:
-            raise InvalidOperationException(f'Expect command to be "PLACE <X>, <Y>, <Facing>", got "PLACE"')
+            raise InvalidOperationException(f'Expect command to be "PLACE <pos_x>, <pos_y>, <direction>", got "PLACE"')
         location_details = [detail.strip() for detail in action_details.split(',')]
         if len(location_details) != 3:
-            raise InvalidOperationException(f'Expect command to be "PLACE <X>, <Y>, <Facing>", got "PLACE {action_details}"')
+            raise InvalidOperationException(f'Expect command to be "PLACE <pos_x>, <pos_y>, <direction>", got "PLACE {action_details}"')
 
         pos_x, pos_y, direction = location_details
-        pos = (int(pos_x), int(pos_y))
+        try:
+            pos = (int(pos_x), int(pos_y))
+        except:
+            raise InvalidOperationException(f'Position should be integers in <pos_x>, <pos_y>, got "{pos_x}, {pos_y}"')
+        
         if not self.is_valid_pos(pos):
             raise InvalidOperationException(f'Invalid position in the map, should be within 0 to {self.map_size_x} in X and 0 to {self.map_size_y} in Y.')
         if not self.is_valid_direction(direction):

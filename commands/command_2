@@ -1,4 +1,13 @@
-PLACE 0,0,WEST
+move
+left
+right
+report
+invalid_command
+place
+place a,b,c
+place 100,100,west
+place 0,0,invalid_direction
+place 0,0,west
 report
 move
 left

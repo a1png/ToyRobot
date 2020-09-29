@@ -1,4 +1,13 @@
 Enter the command file: 
+A robot must be placed before any other command can be executed. Abort.
+A robot must be placed before any other command can be executed. Abort.
+A robot must be placed before any other command can be executed. Abort.
+A robot must be placed before any other command can be executed. Abort.
+Invalid command. Abort.
+Expect command to be "PLACE <pos_x>, <pos_y>, <direction>", got "PLACE"
+Position should be integers in <pos_x>, <pos_y>, got "A, B"
+Invalid position in the map, should be within 0 to 5 in X and 0 to 5 in Y.
+Invalid direction, should be one of ('NORTH', 'EAST', 'SOUTH', 'WEST')
 0, 0, WEST
 Destination (-1, 0) cannot be reached.
 Destination (0, -1) cannot be reached.

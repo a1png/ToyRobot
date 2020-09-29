@@ -25,3 +25,4 @@ Write each command in one line in the order the commands are supposed to be exec
     - The destination should be a valid position, i.e. within the current map. Otherwise the command will not be executed.
 3. `LEFT`/`RIGHT` Turns the robot to its left/right by 90 degrees.
 4. `REPORT` Reports the robot's current position and direction in the form of `<pos_x>, <pos_y>, <direction>`
+5. `EXIT` Exits the program.

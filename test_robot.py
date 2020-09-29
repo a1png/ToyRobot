@@ -35,7 +35,7 @@ class TestPlace:
         robot = Robot()
         with pytest.raises(InvalidOperationException) as invalid_operation_exception:
             robot.place(**{})
-        assert invalid_operation_exception.value.args[0] == 'Expect command to be "PLACE <X>, <Y>, <Facing>", got "PLACE"'
+        assert invalid_operation_exception.value.args[0] == 'Expect command to be "PLACE <pos_x>, <pos_y>, <direction>", got "PLACE"'
         assert robot.placed == False
         assert robot.pos == None
         assert robot.direction == None
@@ -46,7 +46,7 @@ class TestPlace:
         robot = Robot()
         with pytest.raises(InvalidOperationException) as invalid_operation_exception:
             robot.place(**{'action_details': 'invalid_command'})
-        assert invalid_operation_exception.value.args[0] == 'Expect command to be "PLACE <X>, <Y>, <Facing>", got "PLACE invalid_command"'
+        assert invalid_operation_exception.value.args[0] == 'Expect command to be "PLACE <pos_x>, <pos_y>, <direction>", got "PLACE invalid_command"'
         assert robot.placed == False
         assert robot.pos == None
         assert robot.direction == None
